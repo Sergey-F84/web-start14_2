@@ -10,8 +10,12 @@ var mySwiper = new Swiper('.swiper-container', {
 type="text/javascript">
     ymaps.ready(init);
     function init(){
-        var myMap = new ymaps.Map("map", {
+        var Map = new ymaps.Map("map", {
             center: [7.890759, 98.294690],
             zoom: 17
         });
-    }
+        var Mark = new ymaps.Placemark(
+        [7.890759, 98.294690],
+        );
+        Map.geoObjects.add(Mark);
+    };
